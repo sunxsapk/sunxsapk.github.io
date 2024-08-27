@@ -92,6 +92,7 @@ export default function EmailPrompt(props) {
       else {
         if (trm.key.name.length > 1) {
           if (trm.key.code === 8) trm.data = trm.data.slice(0, trm.data.length - 1)
+          if (trm.key.code === 13) trm.data = trm.data.concat("\n");
         } else trm.data = trm.data.concat(trm.key.name);
       }
 
@@ -130,15 +131,15 @@ export default function EmailPrompt(props) {
 
   return (
     <section {...props}>
-      <div className="rounded-xl border-2 border-secondary p-4 relative h-full flex flex-col">
+      <div className="rounded-xl border-2 border-secondary p-4 relative min-h-[20rem] flex flex-col">
         <h5 className="absolute top-[-.6rem] left-[1rem] px-1 bg-black text-primary">Contact</h5>
         {terminal.mode === modes.normal ?
-          (<p className="italic font-mono text-gray-400 flex-grow">
+          (<p className="italic font-mono text-gray-400 flex-grow whitespace-pre-wrap">
             {!terminal.data ?
               `Press 'i' to enter ${getStateStr()}` :
               terminal.data}
           </p>) :
-          (<p className="font-mono text-gray-400 flex-grow">
+          (<p className="font-mono text-gray-400 flex-grow whitespace-pre-wrap">
             {terminal.data + "⮖"}
           </p>)
         }

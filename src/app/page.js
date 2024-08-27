@@ -1,19 +1,21 @@
-import ContactPage from "@/components/contact";
+import EmailPrompt from "@/components/emailprompt";
 import ExperiencePage from "@/components/experience";
 import HeroPage from "@/components/hero";
+import LinksPage from "@/components/links";
 import PortfolioPage from "@/components/portfolio";
 import { developer } from "@/values";
 
 export default function Home() {
   return (
     <main className="p-8 min-h-screen flex flex-col items-center gap-8">
-      <h1 className="font-mono font-bold">{developer.name}</h1>
+      <h1 className="underline font-mono font-bold">{developer.name}</h1>
       <section className="flex flex-wrap min-h-[25rem] gap-8">
-        <HeroPage className="flex-[0.5]" />
-        <ContactPage className="flex-[0.5]" />
+        <HeroPage className="flex-[0.6]" />
+        <LinksPage className="flex-[0.4]" />
       </section>
-      <PortfolioPage className="flex-grow w-full flex flex-col"/>
-      <ExperiencePage className="flex-grow w-full flex flex-col"/>
+      <PortfolioPage className="flex-grow w-full flex flex-col" />
+      <ExperiencePage className="flex-grow w-full flex flex-col" />
+      <EmailPrompt id="contact" className="w-full" />
     </main>
   );
 }

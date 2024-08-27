@@ -7,27 +7,30 @@ import { useState } from "react";
 
 export default function PortfolioPage(props) {
 
+  const projectcomp = (project, i) => (
+    <div className="rounded-xl p-4 border-2 border-primary relative gap-2 flex flex-col items-center min-w-[30rem] max-w-[40rem]" key={i}>
+      <Video project={project} />
+      <div className="font-mono p-2 rounded-xl">
+        <h4 className="text-wrap max-w-[30rem] font-bold bg-secondary bg-opacity-40">{"> "}{project.title}</h4>
+        <h5 className="text-wrap max-w-[30rem]">&nbsp;&nbsp;{project.description}</h5>
+        <div className="flex items-center gap-4 mt-2">
+          {project.link && <Link href={project.link.href} className="hover:scale-125 duration-200" >
+            <img src={project.link.iconSrc} className="h-10" />
+          </Link>}
+          {project.code && <Link href={project.code.href} className="hover:scale-125 duration-200" >
+            {project.code.icon}
+          </Link>}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <section {...props}>
       <div className="p-4 rounded-xl border-2 border-secondary relative">
         <h5 className="absolute top-[-.6rem] left-[1rem] px-1 bg-black text-primary">Portfolio</h5>
         <div className="flex gap-4 justify-evenly items-center flex-wrap">
-          {portfolio.map((project, i) => (
-            <div className="rounded-xl p-4 border-2 border-primary relative gap-2 flex flex-col" key={i}>
-              <Video project={project} />
-              <div className="font-mono p-2 bg-primary bg-opacity-25 rounded-xl">
-                <h4 className="text-wrap max-w-[30rem]">{project.title} : {project.description}</h4>
-                <div className="flex items-center gap-4">
-                  {project.link && <Link href={project.link.href} className="hover:scale-125 duration-200" >
-                    <img src={project.link.iconSrc} className="h-10" />
-                  </Link>}
-                  {project.code && <Link href={project.code.href} className="hover:scale-125 duration-200" >
-                    {project.code.icon}
-                  </Link>}
-                </div>
-              </div>
-            </div>
-          ))}
+          {portfolio.map(projectcomp)}
         </div>
       </div>
     </section>
@@ -38,7 +41,7 @@ const Video = ({ project }) => {
   const [isPlaying, setPlaying] = useState(false);
 
   return (
-    <div className="relative h-[16rem] aspect-video">
+    <div className="relative w-[25rem] aspect-video">
       {!isPlaying && (
         <div
           className="absolute top-0 left-0 z-10 w-full h-full opacity-85 hover:opacity-100 hover:scale-[1.05] duration-200 cursor-pointer"
