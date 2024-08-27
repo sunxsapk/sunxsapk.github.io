@@ -13,7 +13,7 @@ export default function LinksPage(props) {
           </Link>
         ))}
       
-        <Link href="#contact" className="bg-secondary px-4 py-2 rounded-md w-fit bg-opacity-50 hover:bg-opacity-80">Click here to send email</Link>
+        <Link href="#contact" className="bg-secondary px-4 py-2 mt-4 rounded-md w-fit bg-opacity-50 hover:bg-opacity-80 text-[0.83rem] md:text-[1em]">Click here to send email</Link>
       </div>
     </section>
   );
