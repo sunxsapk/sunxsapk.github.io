@@ -34,7 +34,6 @@ export default function EmailPrompt(props) {
 
   const sendEmail = () => {
     if (!form.name || !form.email || !form.message) {
-      console.log(form);
       alert("Please, Don't leave any fields empty");
       return;
     }

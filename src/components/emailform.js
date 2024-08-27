@@ -9,10 +9,11 @@ export default function EmailForm(props) {
     email: "",
     message: ""
   });
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = () => {
+    if(loading) return;
     if (!form.name || !form.email || !form.message) {
-      console.log(form);
       alert("Please, Don't leave any fields empty");
       return;
     }
@@ -30,7 +31,6 @@ export default function EmailForm(props) {
       setLoading(false);
       alert('Thank you ! I will get back to you as soon as possible.');
       setForm({ name: '', email: '', message: '' })
-      setTerminal(p => ({ ...p, data: "" }));
     }, (err) => {
       setLoading(false);
       console.log(err);
@@ -50,7 +50,8 @@ export default function EmailForm(props) {
           <h5 className="font-bold">Name</h5>
           <input
             type="text"
-            name="name"
+            name="name" required
+            placeholder="John Doe"
             value={form.name}
             className="w-full bg-secondary bg-opacity-25 rounded-lg px-2 py-1"
             onChange={handleChange}
@@ -60,7 +61,8 @@ export default function EmailForm(props) {
         <div className="px-2 py-4 space-y-1">
           <h5 className="font-bold">Email</h5>
           <input
-            type="text"
+            type="email" required
+            placeholder="johndoe@sth.com"
             name="email"
             value={form.email}
             className="w-full bg-secondary bg-opacity-25 rounded-lg px-2 py-1"
@@ -72,14 +74,15 @@ export default function EmailForm(props) {
           <h5 className="font-bold">Message</h5>
           <textarea
             type="text" rows={5}
-            name="message"
+            name="message" required
+            placeholder="Hello there, I've got an idea. Let's talk about it."
             value={form.message}
             className="w-full bg-secondary bg-opacity-25 rounded-lg px-2 py-1"
             onChange={handleChange}
           />
         </div>
         
-        <button className="px-4 self-center m-2 bg-secondary bg-opacity-55 rounded-md" onClick={sendEmail}>Submit</button>
+        <button className="px-4 self-center m-2 bg-secondary bg-opacity-55 rounded-md" onClick={sendEmail}>{loading? "Sending..." : "Submit"}</button>
       </div>
     </section>
   );
