@@ -7,4 +7,4 @@ const buildConfig = {
 
 const localConfig = {};
 
-export default localConfig;
+export default buildConfig;
