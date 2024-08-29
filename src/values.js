@@ -31,7 +31,7 @@ export const portfolio = [
       icon: giticon
     },
     thumbnail: "/images/EndLess.png", //img
-    demo: "/videos/endless.mp4", //video
+    demo: "https://media.githubusercontent.com/media/therealsunx/therealsunx.github.io.github.io/videos/endless.mp4", //video
   },
   {
     title: "Physx-2D",
