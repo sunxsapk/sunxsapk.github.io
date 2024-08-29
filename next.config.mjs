@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
-const buildConfig = {
+  // next.config.js
+const buildConf = {
   output: "export",
-  basePath: "/therealsunx.github.io",
-  assetPrefix: "/therealsunx.github.io/"
+  assetPrefix: '', 
+  basePath: '', 
 };
 
-const localConfig = {};
+export default buildConf;
 
-export default buildConfig;
