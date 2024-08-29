@@ -6,8 +6,12 @@ const instaicon = <InstagramIcon color="#e0f" />;
 
 export const developer = {
   name : 'Sunil Sapkota',
+  logo_ : "/images/logo.svg",
+  logo : "/images/therealsunx.svg",
   about : " I am Sunil Sapkota. I am a game developer filled with passion for making games. I make some pretty cool frontend for web-apps too. If you want a piece of this, you know where to find me."
 };
+
+export const resume = "/files/resume.pdf";
 
 export const links = [
   { to: "/therealsunx", href: "https://www.github.com/therealsunx", icon: giticon },

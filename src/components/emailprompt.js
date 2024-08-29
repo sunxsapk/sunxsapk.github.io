@@ -130,7 +130,7 @@ export default function EmailPrompt(props) {
 
   return (
     <section {...props}>
-      <div className="rounded-xl border-2 border-secondary p-4 relative min-h-[20rem] flex flex-col">
+      <div className="rounded-xl border-2 border-secondary p-4 relative min-h-[30rem] flex flex-col">
         <h5 className="absolute top-[-.6rem] left-[1rem] px-1 bg-black text-primary">Contact</h5>
         {terminal.mode === modes.normal ?
           (<p className="italic font-mono text-gray-400 flex-grow whitespace-pre-wrap">

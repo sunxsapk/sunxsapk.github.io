@@ -43,7 +43,7 @@ export default function EmailForm(props) {
   }
   return (
     <section {...props}>
-      <div className="border-2 border-secondary rounded-xl relative font-mono flex flex-col">
+      <div className="border-2 border-secondary rounded-xl relative min-h-[30rem] font-mono flex flex-col lg:p-4">
         <h5 className="absolute top-[-.6rem] left-[1rem] px-1 bg-black text-primary">Contact</h5>
 
         <div className="px-2 py-4 space-y-1">
@@ -82,7 +82,7 @@ export default function EmailForm(props) {
           />
         </div>
         
-        <button className="px-4 self-center m-2 bg-secondary bg-opacity-55 rounded-md" onClick={sendEmail}>{loading? "Sending..." : "Submit"}</button>
+        <button className="px-4 py-1 self-center m-2 bg-secondary bg-opacity-55 rounded-md" onClick={sendEmail}>{loading? "Sending..." : "Submit"}</button>
       </div>
     </section>
   );
