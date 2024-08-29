@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const buildConfig = {
-  reactStrictMode: true,
-  output: 'export',
-  basePath: "/"
+  basePath: "/therealsunx.github.io",
+  assetPrefix: "/therealsunx.github.io/"
 };
 
 const localConfig = {};
