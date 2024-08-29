@@ -6,7 +6,6 @@ const instaicon = <InstagramIcon color="#e0f" />;
 
 export const developer = {
   name : 'Sunil Sapkota',
-  logo_ : "/images/logo.svg",
   logo : "/images/therealsunx.svg",
   about : " I am Sunil Sapkota. I am a game developer filled with passion for making games. I make some pretty cool frontend for web-apps too. If you want a piece of this, you know where to find me."
 };
@@ -24,7 +23,7 @@ export const portfolio = [
     title: "Endless",
     description: "An Endless flight game with dynamically generated environment with thrilling gameplay.",
     link: {
-      href: "https://play.google.com/store/apps/details?id=com.FourSevenGames.Endless&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+      href: "https://play.google.com/store/apps/details?id=com.FourSevenGames.Endless",
       iconSrc: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
     },
     code: {
@@ -32,35 +31,31 @@ export const portfolio = [
       icon: giticon
     },
     thumbnail: "/images/EndLess.png", //img
-    demo: "/videos/Endless.mp4", //video
+    demo: "/videos/endless.mp4", //video
   },
   {
-    title: "Endless",
-    description: "An Endless flight game with dynamically generated environment with thrilling gameplay.",
-    link: {
-      href: "https://play.google.com/store/apps/details?id=com.FourSevenGames.Endless&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-      iconSrc: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-    },
+    title: "Physx-2D",
+    description: "A game/simulation engine library with custom physics and Entity Component System with great performance.",
     code: {
       href: "https://github.com/therealsunx/Endless",
       icon: giticon
     },
-    thumbnail: "/images/EndLess.png", //img
-    demo: "/videos/Endless.mp4", //video
+    thumbnail: "/images/physx2d.png", //img
+    demo: "/videos/physx2d.mp4", //video
   },
   {
-    title: "Endless",
-    description: "An Endless flight game with dynamically generated environment with thrilling gameplay.",
+    title: "Edge Of Space",
+    description: "An arcade classic with a fight at the edge of space.",
     link: {
-      href: "https://play.google.com/store/apps/details?id=com.FourSevenGames.Endless&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+      href: "https://play.google.com/store/apps/details?id=com.FourSevenGames.EdgeOfSpace",
       iconSrc: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
     },
     code: {
-      href: "https://github.com/therealsunx/Endless",
+      href: "https://github.com/therealsunx/EdgeOfSpace",
       icon: giticon
     },
-    thumbnail: "/images/EndLess.png", //img
-    demo: "/videos/Endless.mp4", //video
+    thumbnail: "/images/edgeofspace.png", //img
+    demo: "/videos/edgeofspace.mp4", //video
   },
   /*
   {

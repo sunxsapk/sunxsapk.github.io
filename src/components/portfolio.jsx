@@ -8,7 +8,7 @@ import { useState } from "react";
 export default function PortfolioPage(props) {
 
   const projectcomp = (project, i) => (
-    <div className="rounded-xl p-4 border-2 border-primary relative gap-2 flex flex-col items-center min-w-full lg:min-w-[30rem] max-w-[40rem]" key={i}>
+    <div className="rounded-xl p-4 border-2 border-primary relative gap-2 flex flex-col items-center min-w-full lg:min-w-[20rem] lg:max-w-[28rem]" key={i}>
       <Video project={project} />
       <div className="font-mono p-2 rounded-xl">
         <h4 className="text-wrap max-w-[30rem] font-bold bg-secondary bg-opacity-40">{"> "}{project.title}</h4>
@@ -48,7 +48,7 @@ const Video = ({ project }) => {
           onClick={() => setPlaying(true)}
         >
           <img
-            className="w-full h-full rounded-xl"
+            className="w-full h-full rounded-xl object-cover"
             src={project.thumbnail}
           />
           <PlayCircleIcon className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-16 h-16 rounded-full" />
