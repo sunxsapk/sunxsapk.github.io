@@ -62,6 +62,7 @@ const Video = ({ project }) => {
         autoPlay={isPlaying}
       >
         <source src={project.demo} type="video/mp4" />
+        Your browser doesn't support video tag.
       </video>
     </div>
   );
