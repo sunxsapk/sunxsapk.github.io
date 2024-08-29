@@ -2,8 +2,7 @@
 const buildConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/',
-  assetPrefix: '/'
+  basePath: "/"
 };
 
 const localConfig = {};
