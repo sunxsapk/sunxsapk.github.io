@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const buildConfig = {
   output: 'export',
-  basePath: '/gdportfolio',
-  assetPrefix: '/gdportfolio/'
+  basePath: '/',
+  assetPrefix: '/'
 };
 
 const localConfig = {};
 
-export default buildConfig;
+export default localConfig;
