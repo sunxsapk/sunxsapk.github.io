@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const buildConfig = {
+  reactStrictMode: true,
   output: 'export',
   basePath: '/',
   assetPrefix: '/'
