@@ -31,7 +31,7 @@ export const portfolio = [
       icon: giticon
     },
     thumbnail: "/images/EndLess.png", //img
-    demo: "https://media.githubusercontent.com/media/therealsunx/therealsunx.github.io.github.io/videos/endless.mp4", //video
+    demo: "https://drive.google.com/file/d/1t8UD-7-DZXsghvVS1-RyveFCfywZPO7k/preview?mute=1", //video
   },
   {
     title: "Physx-2D",
@@ -41,7 +41,7 @@ export const portfolio = [
       icon: giticon
     },
     thumbnail: "/images/physx2d.png", //img
-    demo: "/videos/physx2d.mp4", //video
+    demo: "https://drive.google.com/file/d/1hSVknz656ml2iAozl5l-1MP_rNb8kQwC/preview", //video
   },
   {
     title: "Edge Of Space",
@@ -55,7 +55,7 @@ export const portfolio = [
       icon: giticon
     },
     thumbnail: "/images/edgeofspace.png", //img
-    demo: "/videos/edgeofspace.mp4", //video
+    demo: "https://drive.google.com/file/d/1xEOV2IcrlGtrAdvHoNvaamFSvzAtifqX/preview", //video
   },
   /*
   {

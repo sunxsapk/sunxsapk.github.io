@@ -5,6 +5,7 @@ const buildConf = {
   assetPrefix: '', 
   basePath: '', 
 };
+const localConfig = {};
 
 export default buildConf;
 

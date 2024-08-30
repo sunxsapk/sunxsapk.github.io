@@ -3,7 +3,8 @@
 import { portfolio } from "@/values";
 import { PlayCircleIcon } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { document } from "postcss";
+import { useRef, useState } from "react";
 
 export default function PortfolioPage(props) {
 
@@ -38,24 +39,26 @@ export default function PortfolioPage(props) {
 }
 
 const Video = ({ project }) => {
-  const [isPlaying, setPlaying] = useState(false);
 
   return (
     <div className="relative w-full lg:w-[25rem] aspect-video">
-      {!isPlaying && (
-        <div
-          className="absolute top-0 left-0 z-10 w-full h-full opacity-85 hover:opacity-100 hover:scale-[1.05] duration-200 cursor-pointer"
-          onClick={() => setPlaying(true)}
-        >
-          <img
-            className="w-full h-full rounded-xl object-cover"
-            src={project.thumbnail}
-          />
-          <PlayCircleIcon className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-16 h-16 rounded-full" />
-        </div>
-      )}
+    {/*<div
+        className="absolute top-0 left-0 z-10 w-full h-full hover:opacity-0 opacity-85 duration-200 cursor-pointer"
+        onClick={handlePlay}
+      >
+        <img
+          className="w-full h-full rounded-xl object-cover"
+          src={project.thumbnail}
+        />
+        <PlayCircleIcon className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-16 h-16 rounded-full" />
+      </div>*/}
+      <iframe
+        src={project.demo}
+        allow="autoplay; encrypted-media"
+        className="h-full w-full"
+      />
 
-      <video
+      {/*<video
         controls
         className="h-full w-full"
         style={{ display: isPlaying ? 'block' : 'none' }}
@@ -63,7 +66,7 @@ const Video = ({ project }) => {
       >
         <source src={project.demo} type="video/mp4" />
         Your browser doesnot support video tag.
-      </video>
+      </video>*/}
     </div>
   );
 };
