@@ -31,17 +31,17 @@ export const portfolio = [
       icon: giticon
     },
     thumbnail: "/images/EndLess.png", //img
-    demo: "https://drive.google.com/file/d/1t8UD-7-DZXsghvVS1-RyveFCfywZPO7k/preview?mute=1", //video
+    demo: "https://drive.google.com/file/d/1HTplTROBPICTkVatyNcTnFtPCTMq4MF4/preview", //video
   },
   {
     title: "Physx-2D",
     description: "A game/simulation engine library with custom physics and Entity Component System with great performance.",
     code: {
-      href: "https://github.com/therealsunx/Endless",
+      href: "https://github.com/therealsunx/Physx-2D",
       icon: giticon
     },
     thumbnail: "/images/physx2d.png", //img
-    demo: "https://drive.google.com/file/d/1hSVknz656ml2iAozl5l-1MP_rNb8kQwC/preview", //video
+    demo: "https://drive.google.com/file/d/1MyHf1fhyxFdGrWF7u4Z8MSKW1H6eX5Sv/preview", //video
   },
   {
     title: "Edge Of Space",
@@ -55,7 +55,7 @@ export const portfolio = [
       icon: giticon
     },
     thumbnail: "/images/edgeofspace.png", //img
-    demo: "https://drive.google.com/file/d/1xEOV2IcrlGtrAdvHoNvaamFSvzAtifqX/preview", //video
+    demo: "https://drive.google.com/file/d/1kIa2TaqhWo2GvgFqES4DHDYwiVY4HNU1/preview", //video
   },
   /*
   {
