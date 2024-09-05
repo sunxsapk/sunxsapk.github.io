@@ -1,26 +1,40 @@
 'use client';
 
 import { portfolio } from "@/values";
-import { PlayCircleIcon } from "lucide-react";
 import Link from "next/link";
-import { document } from "postcss";
-import { useRef, useState } from "react";
+import useModal from "./modal";
+import { useState } from "react";
 
 export default function PortfolioPage(props) {
+  const projModal = useModal();
+  const [projInView, setProjInView] = useState(portfolio[0]);
+
+  const openProj = proj => {
+    projModal.setActive(true);
+    setProjInView(proj);
+  }
 
   const projectcomp = (project, i) => (
     <div className="rounded-xl p-4 border-2 border-primary relative gap-2 flex flex-col items-center min-w-full lg:min-w-[20rem] lg:max-w-[28rem]" key={i}>
-      <Video project={project} />
+      <iframe
+        src={project.demo}
+        allow="autoplay; encrypted-media"
+        className="w-full aspect-video"
+      />
       <div className="font-mono p-2 rounded-xl">
         <h4 className="text-wrap max-w-[30rem] font-bold bg-secondary bg-opacity-40">{"> "}{project.title}</h4>
         <h5 className="text-wrap max-w-[30rem]">{project.description}</h5>
-        <div className="flex items-center gap-4 mt-2">
-          {project.link && <Link href={project.link.href} className="hover:scale-125 duration-200" >
-            <img src={project.link.iconSrc} className="h-10" />
-          </Link>}
-          {project.code && <Link href={project.code.href} className="hover:scale-125 duration-200" >
-            {project.code.icon}
-          </Link>}
+        <div className="flex items-center justify-between mt-2">
+          <div className="flex items-center gap-4">
+            {project.link && <Link href={project.link.href} className="hover:scale-125 duration-200" >
+              <img src={project.link.iconSrc} className="h-10" />
+            </Link>}
+            {project.code && <Link href={project.code.href} className="hover:scale-125 duration-200" >
+              {project.code.icon}
+            </Link>}
+          </div>
+
+          <button onClick={_ => openProj(project)} className="px-4 py-1 rounded-md bg-primary bg-opacity-30">Details</button>
         </div>
       </div>
     </div>
@@ -34,39 +48,48 @@ export default function PortfolioPage(props) {
           {portfolio.map(projectcomp)}
         </div>
       </div>
+
+      <projModal.component>
+        <ProjectDetail project={projInView} />
+      </projModal.component>
     </section>
   );
 }
 
-const Video = ({ project }) => {
+const ProjectDetail = ({ project }) => (
+  <div className="flex flex-col items-center gap-4 py-4 md:px-16 w-full md:w-3/4 h-full bg-black border-2 border-secondary rounded-xl overflow-clip font-mono">
+    <h2 className="underline">{project.title}</h2>
+    <iframe
+      src={project.demo}
+      allow="autoplay; encrypted-media"
+      className="w-full aspect-video"
+    />
+    <div className="w-full flex flex-col gap-4">
+      <h3 className="text-wrap">{project.description}</h3>
 
-  return (
-    <div className="relative w-full lg:w-[25rem] aspect-video">
-    {/*<div
-        className="absolute top-0 left-0 z-10 w-full h-full hover:opacity-0 opacity-85 duration-200 cursor-pointer"
-        onClick={handlePlay}
-      >
-        <img
-          className="w-full h-full rounded-xl object-cover"
-          src={project.thumbnail}
-        />
-        <PlayCircleIcon className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-16 h-16 rounded-full" />
-      </div>*/}
-      <iframe
-        src={project.demo}
-        allow="autoplay; encrypted-media"
-        className="h-full w-full"
-      />
+      <div className="flex flex-col gap-4">
+        <p className="border-b-2 border-secondary">Skills</p>
+        <div className="flex flex-wrap gap-4">
+          {project.skills.map(skill => (
+            <Link href={`https://www.google.com/search?q=${skill}`} target="_blank" className="cursor-pointer">
+              <h4 key={skill} className="px-2 py-1 rounded-md bg-secondary bg-opacity-40">{skill}</h4>
+            </Link>
+          ))}
+        </div>
+      </div>
 
-      {/*<video
-        controls
-        className="h-full w-full"
-        style={{ display: isPlaying ? 'block' : 'none' }}
-        autoPlay={isPlaying}
-      >
-        <source src={project.demo} type="video/mp4" />
-        Your browser doesnot support video tag.
-      </video>*/}
+      <div className="flex flex-col gap-4">
+        <p className="border-b-2 border-secondary">Links</p>
+        <div className="flex flex-wrap gap-4 items-center">
+          {project.link && <Link href={project.link.href} className="hover:scale-125 duration-200" >
+            <img src={project.link.iconSrc} className="h-10" />
+          </Link>}
+          {project.code && <Link href={project.code.href} className="hover:scale-125 duration-200" >
+            {project.code.icon}
+          </Link>}
+        </div>
+      </div>
     </div>
-  );
-};
+  </div>
+);
+
