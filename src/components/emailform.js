@@ -82,7 +82,7 @@ export default function EmailForm(props) {
           />
         </div>
         
-        <button className="px-4 py-1 self-center m-2 bg-secondary bg-opacity-55 rounded-md" onClick={sendEmail}>{loading? "Sending..." : "Submit"}</button>
+        <button className="px-4 py-2 md:px-8 self-center m-2 bg-secondary bg-opacity-55 hover:bg-opacity-80 duration-100 rounded-md" onClick={sendEmail}>{loading? "Sending..." : "Submit"}</button>
       </div>
     </section>
   );

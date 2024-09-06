@@ -27,11 +27,11 @@ export default function Home() {
       <ExperiencePage className="flex-grow w-full flex flex-col" />
 
       <div className="w-full flex gap-8">
-        {vim ? <EmailPrompt id="contact" className="w-full" />
-          : <EmailForm className="w-full" />}
+        {vim ? <EmailPrompt id="contact" className="w-full bg-[#000a]" />
+          : <EmailForm className="w-full bg-[#000a]" />}
         <div className="hidden lg:flex-[0.1] lg:flex flex-col gap-4 py-4 pr-4">
-          <button className="flex-1 hover:flex-[2] p-4 rounded-md duration-200" style={{background: vim?"#e64":"#999"}} onClick={() => setVim(true)}></button>
-          <button className="flex-1 hover:flex-[2] p-4 rounded-md duration-200" style={{background: vim?"#999":"#e64"}} onClick={() => setVim(false)}></button>
+          <button className="flex-1 hover:flex-[2] p-4 rounded-md duration-200" style={{ background: vim ? "#e64" : "#999" }} onClick={() => setVim(true)}></button>
+          <button className="flex-1 hover:flex-[2] p-4 rounded-md duration-200" style={{ background: vim ? "#999" : "#e64" }} onClick={() => setVim(false)}></button>
         </div>
       </div>
     </main>

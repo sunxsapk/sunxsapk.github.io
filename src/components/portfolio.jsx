@@ -15,7 +15,7 @@ export default function PortfolioPage(props) {
   }
 
   const projectcomp = (project, i) => (
-    <div className="rounded-xl p-4 border-2 border-primary relative gap-2 flex flex-col items-center min-w-full lg:min-w-[20rem] lg:max-w-[28rem]" key={i}>
+    <div className="bg-black rounded-xl p-4 border-2 border-primary relative gap-2 flex flex-col items-center min-w-full lg:min-w-[20rem] lg:max-w-[28rem]" key={i}>
       <iframe
         src={project.demo}
         allow="autoplay; encrypted-media"
@@ -71,8 +71,8 @@ const ProjectDetail = ({ project }) => (
         <p className="border-b-2 border-secondary">Skills</p>
         <div className="flex flex-wrap gap-4">
           {project.skills.map(skill => (
-            <Link href={`https://www.google.com/search?q=${skill}`} target="_blank" className="cursor-pointer">
-              <h4 key={skill} className="px-2 py-1 rounded-md bg-secondary bg-opacity-40">{skill}</h4>
+            <Link key={skill} href={`https://www.google.com/search?q=${skill}`} target="_blank" className="cursor-pointer">
+              <h4 className="px-2 py-1 rounded-md bg-secondary bg-opacity-40 hover:bg-opacity-80">{skill}</h4>
             </Link>
           ))}
         </div>
