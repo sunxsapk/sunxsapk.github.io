@@ -57,17 +57,20 @@ export default function PortfolioPage(props) {
 }
 
 const ProjectDetail = ({ project }) => (
-  <div className="flex flex-col items-center gap-4 py-4 md:px-16 w-full md:w-3/4 h-full bg-black border-2 border-secondary rounded-xl overflow-clip font-mono">
+  <div className="flex flex-col items-center gap-4 py-4 px-2 md:px-16 w-full md:w-3/4 h-full bg-black 
+  border-2 border-secondary rounded-xl overflow-y-auto font-mono">
     <h2 className="underline">{project.title}</h2>
     <iframe
       src={project.demo}
       allow="autoplay; encrypted-media"
       className="w-full aspect-video"
     />
-    <div className="w-full flex flex-col gap-4">
+    <div className="w-full flex flex-col gap-4 py-2">
       <h3 className="text-wrap">{project.description}</h3>
+      <hr className="border-secondary" />
+      <h4 className="text-wrap">{project.more}</h4>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 py-2">
         <p className="border-b-2 border-secondary">Skills</p>
         <div className="flex flex-wrap gap-4">
           {project.skills.map(skill => (

@@ -10,7 +10,7 @@ export default function useModal() {
       <div onClick={() => setActive(false)} className="p-2 md:py-10 md:px-[15vw] h-full w-full relative flex flex-col gap-2 items-center">
         {children}
         
-        <button className="px-8 py-2 border-2 border-secondary rounded-xl w-fit">Close</button>
+        <button className="px-8 py-2 border-2 border-secondary rounded-xl w-fit bg-primary bg-opacity-30">Close</button>
       </div>
     </div>
   );

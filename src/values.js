@@ -7,7 +7,9 @@ const instaicon = <InstagramIcon color="#e0f" />;
 export const developer = {
   name : 'Sunil Sapkota',
   logo : "/images/therealsunx.svg",
-  about : " I am Sunil Sapkota. I am a game developer filled with passion for making games. I make some pretty cool frontend for web-apps too. If you want a piece of this, you know where to find me."
+  about : `I am Sunil Sapkota. I am a programmer that loves creating weird things. I mainly
+  develop games and tools like game engines, physics engines, text editors, etc. I am also a web
+  developer too (who thought). Anyway, I love solving problems with code.`
 };
 
 export const resume = "/files/resume.pdf";
@@ -20,8 +22,33 @@ export const links = [
 
 export const portfolio = [
   {
+    title: "trvim",
+    description: "trvim - is a text editor, similiar in operation to vim, built in C.",
+
+    more:`I started to develop trvim, only because I wanted to see if I can program some features of
+    vim. So, I went on to create a simple text editor that uses vim motions. Along the way,
+    many features came along because, ...why not? So now It has some cool features like, syntax 
+    highlighting, split-screen, buffer-based file editing, selection replacement, etc. `,
+
+    skills: ["Text Editor Programming", "Non-Canonical Input Handling",
+      "Data Structures & Algorithms", "C", "Syntax Highlighter Programming", "CMAKE",
+      "Memory Management", "System Programming"],
+    code: {
+      href: "https://github.com/therealsunx/trvim",
+      icon: giticon
+    },
+    thumbnail: "/images/trvim.png", //img
+    demo: "https://drive.google.com/file/d/1mwa9bAGj4IGuG-X-l33Db7iyxbTjwJD7/preview", //video
+  },
+  {
     title: "Endless",
     description: "An Endless flight game with dynamically generated environment with thrilling gameplay.",
+
+    more : `It is a 3D endless flight game, that has dynamic environment each time you play, thanks
+    to power of procedural generation. It uses semi-wave function collapse algorithm to make the terrain
+    continously. I found that it is good to play this game with headphones on. It is highly
+    immersive that way.`,
+
     skills: ["Unity", "C#", "Blender", "3D Modelling", "Procedural Generation"],
     link: {
       href: "https://play.google.com/store/apps/details?id=com.FourSevenGames.Endless",
@@ -37,7 +64,19 @@ export const portfolio = [
   {
     title: "Physx-2D",
     description: "A game/simulation engine library with custom physics and Entity Component System with great performance.",
-    skills: ["Physics Engine Programming", "Graphics Engine Programming", "OpenGL", "GLSL", "Entity Component System(ECS) Design]", "Shared Library Building", "C/C++", "CMAKE"],
+
+    more:`Physx-2D is a game/physics engine library I created for C/C++. It does not sit on top of
+    any other libraries. It handles everything from creation & management of windows, rendering Sprites,
+    textures and shaders loading - to handling physics-system as well as managing its own Entity
+    Component System. It has optimized rendering system which utilizes instanced rendering for reducing
+    draw-calls. It is developed to be available across different platforms and also provides some
+    platform-specific defination to make it easy for developers. It also provides its own logging system for debugging
+    which erases all debug statements during release build, thus making faster builds. It has many other
+    features which you can check out on its github repo.`,
+
+    skills: ["Physics Engine Programming", "Graphics Engine Programming", "OpenGL", "GLSL",
+      "Entity Component System(ECS) Design]", "Shared Library Building", "C/C++", "CMAKE",
+      "Data Structure & Algorithms", "Texture & Shaders Loading", "Compute Shaders"],
     code: {
       href: "https://github.com/therealsunx/Physx-2D",
       icon: giticon
@@ -48,6 +87,9 @@ export const portfolio = [
   {
     title: "Edge Of Space",
     description: "An arcade classic with a fight at the edge of space.",
+
+    more : `It is a 2D game that I made for me to pass some time and later went on to release it.`,
+
     skills: ["Unity", "C#", "Aseprite", "2D Pixel Art", "Procedural Generation"],
     link: {
       href: "https://play.google.com/store/apps/details?id=com.FourSevenGames.EdgeOfSpace",
