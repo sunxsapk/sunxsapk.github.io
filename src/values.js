@@ -1,4 +1,4 @@
-import { GithubIcon, InstagramIcon, LinkedinIcon } from "lucide-react";
+import { GithubIcon, InstagramIcon, LinkedinIcon, TagIcon } from "lucide-react";
 
 const giticon = <GithubIcon color="#fff"/>;
 const linkedinicon = <LinkedinIcon color="#44d" />;
@@ -7,9 +7,9 @@ const instaicon = <InstagramIcon color="#e0f" />;
 export const developer = {
   name : 'Sunil Sapkota',
   logo : "/images/therealsunx.svg",
-  about : `I am Sunil Sapkota. I am a programmer that loves creating weird things. I mainly
-  develop games and tools like game engines, physics engines, text editors, etc. I am also a web
-  developer too (who thought). Anyway, I love solving problems with code.`
+  about : `I am Sunil Sapkota. I am a programmer/problem solver by default. I love making stuffs
+  with code. So far, I've made Games, Game/Physics engines, Text editor, Web-apps, etc. Contact
+  me if I can prove to be helpful to you.`
 };
 
 export const resume = "/files/resume.pdf";
@@ -23,7 +23,7 @@ export const links = [
 export const portfolio = [
   {
     title: "trvim",
-    description: "trvim - is a text editor, similiar in operation to vim, built in C.",
+    description: "trvim - is a text editor, similar in operation to vim, built in C.",
 
     more:`I started to develop trvim, only because I wanted to see if I can program some features of
     vim. So, I went on to create a simple text editor that uses vim motions. Along the way,
@@ -33,6 +33,10 @@ export const portfolio = [
     skills: ["Text Editor Programming", "Non-Canonical Input Handling",
       "Data Structures & Algorithms", "C", "Syntax Highlighter Programming", "CMAKE",
       "Memory Management", "System Programming"],
+    link: {
+      href: "https://github.com/therealsunx/trvim/releases/tag/trvim-v0.0.1",
+      iconSrc: <TagIcon color="#ffffff"/>
+    },
     code: {
       href: "https://github.com/therealsunx/trvim",
       icon: giticon
@@ -130,6 +134,7 @@ export const experience = [
     skills: ["React", "Nextjs", "Javascript", "THREEjs", "Fiberjs", "Konvajs", "API integration"],
     project_types: ["Dynamic Web-apps", "2D configurators", "3D Configurators", "Company Portfolio Sites"],
   },
+  /*
   {
     field: "Game Developement",
     position: "Indie Developer",
@@ -139,7 +144,6 @@ export const experience = [
     skills: ["Unity", "C#", "C++", "Engine development", "ECS", "OPENGL", "Shader", "Blender"],
     project_types: ["2D Mobile games", "3d Mobile games", "Desktop Games", "Graphics Engine", "Physics Engine"],
   },
-  /*
   {
     field: "Web Developement",
     position: "Frontend Developer",

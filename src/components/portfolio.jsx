@@ -27,7 +27,10 @@ export default function PortfolioPage(props) {
         <div className="flex items-center justify-between mt-2">
           <div className="flex items-center gap-4">
             {project.link && <Link href={project.link.href} className="hover:scale-125 duration-200" >
-              <img src={project.link.iconSrc} className="h-10" />
+              {typeof project.link.iconSrc == "string" ?
+                <img src={project.link.iconSrc} className="h-10" /> :
+                project.link.iconSrc
+              }
             </Link>}
             {project.code && <Link href={project.code.href} className="hover:scale-125 duration-200" >
               {project.code.icon}
@@ -85,7 +88,10 @@ const ProjectDetail = ({ project }) => (
         <p className="border-b-2 border-secondary">Links</p>
         <div className="flex flex-wrap gap-4 items-center">
           {project.link && <Link href={project.link.href} className="hover:scale-125 duration-200" >
-            <img src={project.link.iconSrc} className="h-10" />
+            {typeof project.link.iconSrc == "string" ?
+              <img src={project.link.iconSrc} className="h-10" /> :
+              project.link.iconSrc
+            }
           </Link>}
           {project.code && <Link href={project.code.href} className="hover:scale-125 duration-200" >
             {project.code.icon}
