@@ -34,7 +34,7 @@ export const portfolio = [
       "Data Structures & Algorithms", "C", "Syntax Highlighter Programming", "CMAKE",
       "Memory Management", "System Programming"],
     link: {
-      href: "https://github.com/therealsunx/trvim/releases/tag/trvim-v0.0.1",
+      href: "https://github.com/therealsunx/trvim/releases",
       iconSrc: <TagIcon color="#ffffff"/>
     },
     code: {
