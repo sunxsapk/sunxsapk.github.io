@@ -1,5 +1,6 @@
 import { GithubIcon, InstagramIcon, LinkedinIcon, TagIcon } from "lucide-react";
 
+const tagicon = <TagIcon color="#ffffff"/>;
 const giticon = <GithubIcon color="#fff"/>;
 const linkedinicon = <LinkedinIcon color="#44d" />;
 const instaicon = <InstagramIcon color="#e0f" />;
@@ -35,7 +36,7 @@ export const portfolio = [
       "Memory Management", "System Programming"],
     link: {
       href: "https://github.com/therealsunx/trvim/releases",
-      iconSrc: <TagIcon color="#ffffff"/>
+      iconSrc: tagicon
     },
     code: {
       href: "https://github.com/therealsunx/trvim",
@@ -87,6 +88,25 @@ export const portfolio = [
     },
     thumbnail: "/images/physx2d.png", //img
     demo: "https://drive.google.com/file/d/1MyHf1fhyxFdGrWF7u4Z8MSKW1H6eX5Sv/preview", //video
+  },
+  {
+    title: "libhash",
+    description: "A C-library for hashmaps, with easy to use API.",
+
+    more:`libhash is a easy to use c-library for hashmaps. It uses FNV-1a hash algorithm under the
+    hood. It is made easy to use and very intuitive API. Simply clone the library into your project
+    and use it.`,
+
+    skills: ["C", "Memory Management", "Data Structures & Algorithm"],
+    link: {
+      href: "https://github.com/therealsunx/libhash/releases/tag/libhash-v0.0.1",
+      iconSrc: tagicon
+    },
+    code: {
+      href: "https://github.com/therealsunx/libhash",
+      icon: giticon
+    },
+    thumbnail: "/images/libhash.png", //img
   },
   {
     title: "Edge Of Space",

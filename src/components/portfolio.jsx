@@ -16,11 +16,13 @@ export default function PortfolioPage(props) {
 
   const projectcomp = (project, i) => (
     <div className="bg-black rounded-xl p-4 border-2 border-primary relative gap-2 flex flex-col items-center min-w-full lg:min-w-[20rem] lg:max-w-[28rem]" key={i}>
-      <iframe
+    {project.demo ? <iframe
         src={project.demo}
         allow="autoplay; encrypted-media"
         className="w-full aspect-video"
-      />
+      /> : 
+      <img src={project.thumbnail} className="w-full aspect-video object-contain" />
+    }
       <div className="font-mono p-2 rounded-xl">
         <h4 className="text-wrap max-w-[30rem] font-bold bg-secondary bg-opacity-40">{"> "}{project.title}</h4>
         <h5 className="text-wrap max-w-[30rem]">{project.description}</h5>
