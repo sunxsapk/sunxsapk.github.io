@@ -90,6 +90,21 @@ export const portfolio = [
     demo: "https://drive.google.com/file/d/1MyHf1fhyxFdGrWF7u4Z8MSKW1H6eX5Sv/preview", //video
   },
   {
+    title: "tr- ecs",
+    description: "A fast and easy to use Entity Component System in C++.",
+
+    more:`trecs - is a simple and easy to use Entity Component System library written in C++. It
+      uses archetype based approach to manage components, which in turn provides balanced memory-to-performance
+      ratio.`,
+
+    skills: ["Entity Component System", "C++", "Memory Management", "Data Structures & Algorithm"],
+    code: {
+      href: "https://github.com/therealsunx/tr-ecs",
+      icon: giticon
+    },
+    thumbnail: "/images/trecs.png", //img
+  },
+  {
     title: "libhash",
     description: "A C-library for hashmaps, with easy to use API.",
 
