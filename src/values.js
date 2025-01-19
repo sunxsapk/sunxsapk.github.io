@@ -7,7 +7,7 @@ const instaicon = <InstagramIcon color="#e0f" />;
 
 export const developer = {
   name : 'Sunil Sapkota',
-  logo : "/images/therealsunx.svg",
+  logo : "/images/sunxsapk.svg",
   about : `I am Sunil Sapkota. I am a programmer/problem solver by default. I love making stuffs
   with code. So far, I've made Games, Game/Physics engines, Text editor, Web-apps, etc. Contact
   me if I can prove to be helpful to you.`
@@ -16,8 +16,8 @@ export const developer = {
 export const resume = "/files/resume.pdf";
 
 export const links = [
-  { to: "/therealsunx", href: "https://www.github.com/therealsunx", icon: giticon },
-  { to: "/therealsunx", href: "https://www.linkedin.com/in/therealsunx", icon: linkedinicon },
+  { to: "/sunxsapk", href: "https://www.github.com/sunxsapk", icon: giticon },
+  { to: "/sunxsapk", href: "https://www.linkedin.com/in/sunxsapk", icon: linkedinicon },
   { to: "/sunil_sapkota1224", href: "https://www.instagram.com/sunil_sapkota1224", icon: instaicon },
 ];
 
@@ -35,11 +35,11 @@ export const portfolio = [
       "Data Structures & Algorithms", "C", "Syntax Highlighter Programming", "CMAKE",
       "Memory Management", "System Programming"],
     link: {
-      href: "https://github.com/therealsunx/trvim/releases",
+      href: "https://github.com/sunxsapk/trvim/releases",
       iconSrc: tagicon
     },
     code: {
-      href: "https://github.com/therealsunx/trvim",
+      href: "https://github.com/sunxsapk/trvim",
       icon: giticon
     },
     thumbnail: "/images/trvim.png", //img
@@ -60,7 +60,7 @@ export const portfolio = [
       iconSrc: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
     },
     code: {
-      href: "https://github.com/therealsunx/Endless",
+      href: "https://github.com/sunxsapk/Endless",
       icon: giticon
     },
     thumbnail: "/images/EndLess.png", //img
@@ -83,7 +83,7 @@ export const portfolio = [
       "Entity Component System(ECS) Design]", "Shared Library Building", "C/C++", "CMAKE",
       "Data Structure & Algorithms", "Texture & Shaders Loading", "Compute Shaders"],
     code: {
-      href: "https://github.com/therealsunx/Physx-2D",
+      href: "https://github.com/sunxsapk/Physx-2D",
       icon: giticon
     },
     thumbnail: "/images/physx2d.png", //img
@@ -99,7 +99,7 @@ export const portfolio = [
 
     skills: ["Entity Component System", "C++", "Memory Management", "Data Structures & Algorithm"],
     code: {
-      href: "https://github.com/therealsunx/tr-ecs",
+      href: "https://github.com/sunxsapk/tr-ecs",
       icon: giticon
     },
     thumbnail: "/images/trecs.png", //img
@@ -114,11 +114,11 @@ export const portfolio = [
 
     skills: ["C", "Memory Management", "Data Structures & Algorithm"],
     link: {
-      href: "https://github.com/therealsunx/libhash/releases/tag/libhash-v0.0.1",
+      href: "https://github.com/sunxsapk/libhash/releases/tag/libhash-v0.0.1",
       iconSrc: tagicon
     },
     code: {
-      href: "https://github.com/therealsunx/libhash",
+      href: "https://github.com/sunxsapk/libhash",
       icon: giticon
     },
     thumbnail: "/images/libhash.png", //img
@@ -135,7 +135,7 @@ export const portfolio = [
       iconSrc: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
     },
     code: {
-      href: "https://github.com/therealsunx/EdgeOfSpace",
+      href: "https://github.com/sunxsapk/EdgeOfSpace",
       icon: giticon
     },
     thumbnail: "/images/edgeofspace.png", //img
@@ -150,7 +150,7 @@ export const portfolio = [
       iconSrc: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
     },
     code: {
-      href: "https://github.com/therealsunx/Endless",
+      href: "https://github.com/sunxsapk/Endless",
       icon: giticon
     },
     thumbnail: "/images/EndLess.png", //img
@@ -161,13 +161,22 @@ export const portfolio = [
 
 export const experience = [
   {
-    field: "Web Developement",
-    position: "Frontend Developer",
+    field: "Frontend Developement",
+    position: "Software Developer",
     company: "MarginTop Solutions",
     start: "Sep 2023", //date
-    end: "", //data or null (means currently working)
+    end: "",
     skills: ["React", "Nextjs", "Javascript", "THREEjs", "Fiberjs", "Konvajs", "API integration"],
     project_types: ["Dynamic Web-apps", "2D configurators", "3D Configurators", "Company Portfolio Sites"],
+  },
+  {
+    field: "Programmer & Frontend Handler",
+    position: "Executive Member",
+    company: "Robotics Club, Pashchimanchal Campus",
+    start: "Apr 2022", //date
+    end: "Apr 2024",
+    skills: ["Embedded System Programming", "C/C++", "Python", "React", "Nextjs", "Javascript"],
+    project_types: ["Programming Autonomous Systems", "CNC-programming", "Custom CNC-path editor"],
   },
   /*
   {
@@ -178,15 +187,6 @@ export const experience = [
     end: "", //data or null (means currently working)
     skills: ["Unity", "C#", "C++", "Engine development", "ECS", "OPENGL", "Shader", "Blender"],
     project_types: ["2D Mobile games", "3d Mobile games", "Desktop Games", "Graphics Engine", "Physics Engine"],
-  },
-  {
-    field: "Web Developement",
-    position: "Frontend Developer",
-    company: "MarginTop Solutions",
-    start: "Nov 2023", //date
-    end: "", //data or null (means currently working)
-    skills: ["React", "Nextjs", "Javascript", "THREEjs", "Fiberjs", "Konvajs", "API integration"],
-    project_types: ["Static Web-app", "Dynamic Web-apps", "2D & 3D configurators"],
   },
   {
     field: "Web Developement",

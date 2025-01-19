@@ -1,14 +1,14 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "therealsunx portfolio",
-  description: "Portfolio of Game&Web developer -therealsunx",
+  title: "sunxsapk portfolio",
+  description: "Portfolio of sunxsapk",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" href="/images/therealsunx.svg" />
+      <link rel="icon" href="/images/sunxsapk.svg" />
       <body >{children}</body>
     </html>
   );

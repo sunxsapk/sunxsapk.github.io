@@ -1,3 +1,3 @@
 # ITS MY PORTFOLIO
 
-![img](public/images/therealsunx.png)
+![img](public/images/sunxsapk.png)
