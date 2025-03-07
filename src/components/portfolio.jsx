@@ -74,7 +74,10 @@ const ProjectDetail = ({ project }) => (
         <div className="w-full flex flex-col gap-4 py-2">
             <h3 className="text-wrap">{project.description}</h3>
             <hr className="border-secondary" />
-            <h4 className="text-wrap">{project.more}</h4>
+
+            {project.more.map((m, i) => (
+                <h4 className="text-wrap" key={i}>{m}</h4>
+            ))}
 
             <div className="flex flex-col gap-4 py-2">
                 <p className="border-b-2 border-secondary">Skills</p>
