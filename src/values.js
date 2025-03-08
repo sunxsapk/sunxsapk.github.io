@@ -8,8 +8,10 @@ const instaicon = <InstagramIcon color="#e0f" />;
 export const developer = {
     name: 'Sunil Sapkota',
     logo: "/images/sunxsapk.svg",
-    about: `I am Sunil Sapkota. I am a programmer/problem solver by default. I love making stuffs
-      with code. So far, I've made Games, Game Engines, Text editor, Web-apps, etc.`
+    about: `I am Sunil Sapkota. I am a problem solver by default. I make things happen
+    using code. I've found my interest on making games, game engines, tools, web-apps, etc. I 
+    also occasionally make some 2d and 3d assets for games. Reach out to me if you've got
+    something for me.`
 };
 
 export const resume = "/files/resume.pdf";
@@ -23,7 +25,9 @@ export const links = [
 export const portfolio = [
     {
         title: "Everest",
-        description: "Everest is a cross-platform Game Engine written from scratch in C++.",
+        description: `Everest is a cross-platform Game Engine written from scratch in C++, available with
+        a powerful scene editor, high performance ECS, Physics and Rendering Engine, along with post-processing
+        support.`,
 
         more: [`I was always fascinated with games and their development processes. I used to program simple
         arcade games from scratch in python for fun. Upon involving more with it I was suggested to use Unity
@@ -48,7 +52,7 @@ export const portfolio = [
             icon: giticon
         },
         thumbnail: "/images/everest.png", //img
-        demo: "https://drive.google.com/file/d/11k6ZzPCiB7LbtCMO1S48HzbYTlxqlC3m/preview"
+        demo: "https://drive.google.com/file/d/1ayPQqh0hYhKRtoIs8hRwg2NjW2liWOgf/preview"
     },
     {
         title: "trvim",

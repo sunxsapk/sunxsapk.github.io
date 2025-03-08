@@ -15,17 +15,23 @@ export default function PortfolioPage(props) {
     }
 
     const projectcomp = (project, i) => (
-        <div className="bg-black rounded-xl p-4 border-2 border-primary relative gap-2 flex flex-col items-center min-w-full lg:min-w-[20rem] lg:max-w-[28rem]" key={i}>
+        <div className={`
+            bg-black rounded-xl p-4 relative gap-2 flex flex-col items-center min-w-full border-2 border-primary h-[28rem] 
+            ${i === 0 ?
+                "lg:border-y-[6px] lg:border-x-[12px] lg:h-[40rem] lg:min-w-[45vw] lg:max-w-[60vw] lg:mx-[20rem] lg:my-6" :
+                "lg:min-w-[30rem] lg:max-w-[30rem]"} 
+            `}
+            key={i}>
             {project.demo ? <iframe
                 src={project.demo}
                 allow="autoplay; encrypted-media"
-                className="w-full aspect-video"
+                className="w-full flex-grow"
             /> :
                 <img src={project.thumbnail} className="w-full aspect-video object-contain" />
             }
-            <div className="font-mono p-2 rounded-xl">
-                <h4 className="text-wrap max-w-[30rem] font-bold bg-secondary bg-opacity-40">{"> "}{project.title}</h4>
-                <h5 className="text-wrap max-w-[30rem]">{project.description}</h5>
+            <div className="font-mono p-2 rounded-xl w-full">
+                <h4 className="text-wrap w-full font-bold bg-secondary bg-opacity-40">{"> "}{project.title}</h4>
+                <h5 className="text-wrap w-full">{project.description}</h5>
                 <div className="flex items-center justify-between mt-2">
                     <div className="flex items-center gap-4">
                         {project.link && <Link href={project.link.href} className="hover:scale-125 duration-200" >
