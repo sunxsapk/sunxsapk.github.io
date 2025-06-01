@@ -198,11 +198,22 @@ export const portfolio = [
 
 export const experience = [
     {
+        field: "Game Developement",
+        position: "Game Developer",
+        company: "Yarsa Labs",
+        link: "https://www.yarsalabs.com",
+        start: "May 2025",
+        end: "",
+        skills: ["Unity", "C#", "C++", "Game development", "Assets Development", "UI System", "Bugs Fixing"],
+        project_types: ["2D board and card games", "3D driving and racing games", "UI Systems"],
+    },
+    {
         field: "Frontend Developement",
         position: "Software Developer",
         company: "MarginTop Solutions",
+        link: "https://www.margintopsolutions.com",
         start: "Sep 2023", //date
-        end: "",
+        end: "May 2025",
         skills: ["React", "Nextjs", "Javascript", "THREEjs", "Fiberjs", "Konvajs", "API integration"],
         project_types: ["Dynamic Web-apps", "2D configurators", "3D Configurators", "Company Portfolio Sites"],
     },
@@ -210,6 +221,7 @@ export const experience = [
         field: "Programmer & Frontend Handler",
         position: "Executive Member",
         company: "Robotics Club, Pashchimanchal Campus",
+        link: "https://robotics.wrc.edu.np",
         start: "Apr 2022", //date
         end: "Apr 2024",
         skills: ["Embedded System Programming", "C/C++", "Python", "React", "Nextjs", "Javascript"],
@@ -217,22 +229,13 @@ export const experience = [
     },
     /*
     {
-      field: "Game Developement",
-      position: "Indie Developer",
-      company: "",
-      start: "Apr 2022", //date
-      end: "", //data or null (means currently working)
-      skills: ["Unity", "C#", "C++", "Engine development", "ECS", "OPENGL", "Shader", "Blender"],
-      project_types: ["2D Mobile games", "3d Mobile games", "Desktop Games", "Graphics Engine", "Physics Engine"],
+        field: "Web Developement",
+        position: "Frontend Developer",
+        company: "MarginTop Solutions",
+        start: "Nov 2023", //date
+        end: "", //data or null (means currently working)
+        skills: ["React", "Nextjs", "Javascript", "THREEjs", "Fiberjs", "Konvajs", "API integration"],
+        project_types: ["Static Web-app", "Dynamic Web-apps", "2D & 3D configurators"],
     },
-    {
-      field: "Web Developement",
-      position: "Frontend Developer",
-      company: "MarginTop Solutions",
-      start: "Nov 2023", //date
-      end: "", //data or null (means currently working)
-      skills: ["React", "Nextjs", "Javascript", "THREEjs", "Fiberjs", "Konvajs", "API integration"],
-      project_types: ["Static Web-app", "Dynamic Web-apps", "2D & 3D configurators"],
-    },
-   /* */
+    /* */
 ];
