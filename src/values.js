@@ -199,13 +199,13 @@ export const portfolio = [
 export const experience = [
     {
         field: "Game Developement",
-        position: "Game Developer",
+        position: "Lead Game Developer",
         company: "Yarsa Labs",
         link: "https://www.yarsalabs.com",
         start: "May 2025",
         end: "",
         skills: ["Unity", "C#", "C++", "Game development", "Assets Development", "UI System", "Bugs Fixing"],
-        project_types: ["2D board and card games", "3D driving and racing games", "UI Systems"],
+        project_types: ["2D board and card games", "Integration of services in game", "UI Systems", "Game Design", "Cross-game module development"],
     },
     {
         field: "Frontend Developement",
@@ -218,7 +218,7 @@ export const experience = [
         project_types: ["Dynamic Web-apps", "2D configurators", "3D Configurators", "Company Portfolio Sites"],
     },
     {
-        field: "Programmer & Frontend Handler",
+        field: "Robotics and Web Developement",
         position: "Executive Member",
         company: "Robotics Club, Pashchimanchal Campus",
         link: "https://robotics.wrc.edu.np",
