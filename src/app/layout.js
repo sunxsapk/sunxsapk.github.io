@@ -1,15 +1,23 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "sunxsapk portfolio",
-  description: "Portfolio of sunxsapk",
+  title: "Sunil Sapkota — Portfolio",
+  description: "Sunil Sapkota — game engines, tools, web-apps. Portfolio with interactive fluid background and playable mini-games.",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#000000",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" href="/images/sunxsapk.svg" />
-      <body >{children}</body>
+      <head>
+        <link rel="icon" href="/images/sunxsapk.svg" />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

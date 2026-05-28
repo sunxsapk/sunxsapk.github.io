@@ -7,6 +7,7 @@ import HeroPage from "@/components/hero";
 import LinksPage from "@/components/links";
 import PortfolioPage from "@/components/portfolio";
 import ResumePage from "@/components/resume";
+import GamesPage from "@/components/games";
 import { developer } from "@/values";
 import { useState } from "react";
 
@@ -15,7 +16,7 @@ export default function Home() {
 
   return (
     <main className="md:p-2 lg:p-8 min-h-screen flex flex-col items-center gap-8">
-      <h1 className="underline font-mono font-bold">{developer.name}</h1>
+      <h1 className="font-mono font-bold heading-underline glow-primary">{developer.name}</h1>
       <section className="flex flex-col md:flex-row min-h-[25rem] gap-8">
         <HeroPage className="flex-[0.6]" />
         <div className="flex-[0.4] flex flex-col gap-8">
@@ -25,6 +26,7 @@ export default function Home() {
       </section>
       <ExperiencePage className="flex-grow w-full flex flex-col" />
       <PortfolioPage className="flex-grow w-full flex flex-col" />
+      <GamesPage className="flex-grow w-full flex flex-col" />
 
       <div className="w-full flex gap-8">
         {vim ? <EmailPrompt id="contact" className="w-full bg-[#000a]" />
